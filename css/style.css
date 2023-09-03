@@ -1,0 +1,100 @@
+:root{
+  --main-backgroundColor:#0d1117;
+  --second-backgroundColor:#161b22;
+  --text-color:#a5a6a7;
+  --gray-color: #dadada;
+  --mid-gray: #474a4e;
+}
+@media (max-width:600px) {
+  html{
+    font-size: 13px;
+  }
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body{
+  background-color: var(--main-backgroundColor);
+  color: var(--text-color);
+}
+.bg-secondColor{
+  background-color:var(--second-backgroundColor);
+}
+/* --------------------------------------------- */
+nav h1{
+  font-family: "Lobster", cursive;
+}
+@media (max-width:600px) {
+  nav .container{
+    flex-direction: column;
+  }
+  nav .input-group{
+    width: 85% !important;
+    margin-top: 20px;
+  }
+}
+.mainBorder{
+  border: 1px solid #2a2a2a;
+}
+/* ------------------------------ */
+section .container > .header{
+  border-bottom: 1px solid#2a2a2a;
+  border-top: 1px solid #2a2a2a;
+}
+section .lists .container .header{
+  border-bottom: 1px solid#2a2a2a;
+  border-top: 1px solid #2a2a2a;
+}
+section .header .icons i{
+  background-color: var(--second-backgroundColor);
+  border-radius: 7px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
+}
+.active{
+  background-color: var(--mid-gray) !important;
+}
+section .header .icons i:hover{
+  background-color: var(--mid-gray);
+}
+/* ------------------------------------- */
+main .header h5 {
+  font-family: "Lobster", cursive;
+}
+main .header span {
+  background-color: var(--second-backgroundColor);
+  border-radius: 6px;
+  font-size: 16px;
+  border-radius: 50%;
+  padding: 0px 6px;
+}
+main .body{
+  background-color: var(--second-backgroundColor);
+  padding: 20px;
+}
+main .content{
+  background-color: var(--main-backgroundColor);
+  padding: 15px;
+  border: 1px solid #2a2a2a;
+}
+main .body .content span{
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+main .body .content i{
+  font-size: 20px;
+  cursor: pointer;
+}
+/* -------------------------- */
+.addTaskForm{
+  z-index: 9999;
+}

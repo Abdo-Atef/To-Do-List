@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To Do list</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&amp;family=Noto+Sans+Syloti+Nagri&amp;family=Source+Sans+Pro:wght@300;400;600;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="py-3 bg-secondColor">
+      <div class="container d-flex text-center gap-sm-3">
+      <h1 class="fw-bold fs-2">Daily Task</h1>
+      <div class="input-group flex-nowrap mx-auto w-50 d-flex align-items-center justify-content-center">
+        <span class="input-group-text" id="addon-wrapping" style="height: 40px;"><i class="bi bi-search-heart"></i></span>
+        <input type="text" onkeyup="taskSearch(this.value)" class="form-control rounded-end-0 shadow-none" placeholder="Search Tasks...." aria-label="Username" aria-describedby="addon-wrapping" style="height: 40px;">
+      </div>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <div class="header d-flex p-2 justify-content-between align-items-center my-5">
+          <div>
+            <i class="bi bi-stars"></i>
+            <h5 class="fw-bold d-inline-block">All of tasks</h5> 
+          </div>
+          <div class="icons d-flex gap-3 align-items-center">
+            <div class="style d-flex gap-1 bg-secondColor p-1 rounded-3">
+              <i class="bi bi-grid-1x2 fs-3 fa-fw active"></i>
+              <i class="bi bi-list fs-3 fa-fw"></i>
+            </div>
+            <div class="mode bg-secondColor p-1 rounded-3">
+              <i class="bi bi-brightness-high-fill fa-fw fs-3"></i>
+              <i class="bi bi-moon-stars-fill fa-fw fs-3 d-none"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+    </section>
+    <div class="lists-section text-center  mb-5 pb-5">
+      <div class="container">
+        <button class="addNewTask btn btn-warning mx-auto fw-semibold mb-5 py-2"><i class="bi bi-file-earmark-plus"></i> Add New Task</button>
+        <main>
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="nextUp mainBorder rounded-3">
+                <div class="header p-2 px-3 d-flex justify-content-between">
+                  <h5 class="title">NextUP</h5>
+                  <span id="nextUpLength">0</span>
+                </div>
+                <div class="body text-start">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="inProgress mainBorder rounded-3">
+                <div class="header p-2 px-3 d-flex justify-content-between">
+                  <h5 class="title">In Progress</h5>
+                  <span id="inProgressLength">0</span>
+                </div>
+                <div class="body text-start">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="done mainBorder rounded-3">
+                <div class="header p-2 px-3 d-flex justify-content-between">
+                  <h5 class="title">Done</h5>
+                  <span id="doneLength">0</span>
+                </div>
+                <div class="body text-start">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="addTaskForm d-none position-fixed top-0 w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-75">
+      <div class="container px-md-5 text-end">
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect1" aria-label="Floating label select example">
+            <option value="nextUp">Next Up</option>
+            <option value="inProgress">In progress</option>
+            <option value="done">Done</option>
+          </select>
+          <label for="floatingSelect1">Select Task Status</label>
+        </div>
+
+        <div class="form-floating my-3">
+          <select class="form-select " id="floatingSelect2" aria-label="Floating label select example">
+            <option value="Education">Education</option>
+            <option value="Health & Fitness">Health & Fitness</option>
+            <option value="Finance">Finance</option>
+            <option value="Productivity">Productivity</option>
+          </select>
+          <label for="floatingSelect2">Select Category</label>
+        </div>
+
+        <div class="form-floating my-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Task Title</label>
+        </div>
+
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px"></textarea>
+          <label for="floatingTextarea2">Task Description</label>
+        </div>
+        <div class="text-end  my-3">100 remaining character</div>
+        <button class="btn btn-warning w-100" id="AddTask">Add Task</button>
+        <button class="btn btn-primary w-100 d-none" id="updateTask">Update Task</button>
+      </div>
+    </div>
+    <footer class="bg-secondColor py-3 text-center fixed-bottom w-100">
+      <p class="mb-0 fs-6">Made with <i class="fa-solid fa-heart fa-beat" style="color: #ff0000;"></i> by Abdo Atef</p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
